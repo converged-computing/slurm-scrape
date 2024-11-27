@@ -89,6 +89,8 @@ with open("slurm-docs.json", "w") as fd:
 
 # Also break into pages
 for result in results:
+    if not result["sections"]:
+        continue
     slug = os.path.basename(result["url"]).split(".")[0]
     outfile = os.path.join(outdir, f"{slug}.json")
     with open(outfile, "w") as fd:
