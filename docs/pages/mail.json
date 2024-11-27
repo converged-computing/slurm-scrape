@@ -1,0 +1,17 @@
+{
+    "url": "https://slurm.schedmd.com/mail.html",
+    "sections": [
+        {
+            "title": "\n\nSlurm Workload Manager\n\n",
+            "content": "\n\nSchedMD\n\n"
+        },
+        {
+            "title": "Mailing Lists",
+            "content": "SchedMD maintains two Slurm mailing lists:\nslurm-announce@schedmd.com is designated for communications about\nSlurm releases. Only SchedMD may post to this list. Low traffic.\nslurm-users@schedmd.com (formerly slurm-dev@schedmd.com) is for\ndiscussion by the Slurm community, and is typically used by Slurm system\nadministrators for discussion and community-provided support. (Please see the\nSchedMD support page\npage for commercial support options.)\nAny person subscribed to this mailing list may post to it. High traffic.\nYou can subscribe to either list, change your subscription options, or\nunsubscribe through the\nMailman interface here.An archive of the slurm-users list is online:\nhttp://groups.google.com/group/slurm-usersLast modified 2 February 2024"
+        },
+        {
+            "title": "Navigation",
+            "content": "\nSlurm Workload Manager\nVersion 24.05\n\n\nAbout\n\nOverview\nRelease Notes\n\n\n\nUsing\n\nDocumentation\nFAQ\nPublications\n\n\n\nInstalling\n\nDownload\nRelated Software\nInstallation Guide\n\n\n\nGetting Help\n\nMailing Lists\nSupport and Training\nTroubleshooting\n\n\n"
+        }
+    ]
+}

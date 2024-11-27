@@ -1,0 +1,17 @@
+{
+    "url": "https://slurm.schedmd.com/api.html",
+    "sections": [
+        {
+            "title": "\n\nSlurm Workload Manager\n\n",
+            "content": "\n\nSchedMD\n\n"
+        },
+        {
+            "title": "Slurm APIs",
+            "content": "OverviewAll of the Slurm commands utilize a collection of Application Programming\nInterfaces (APIs) exposed through the \"slurm.h\" and \"slurmdb.h\" headers.\nSlurm's APIs are fixed within each major release. They do change \u2014\nsignificantly \u2014 between each major release.Developers are encouraged to target Slurm's REST API\n which provides for broader cross-version compatibility.\nLast modified 12 February 2024\n"
+        },
+        {
+            "title": "Navigation",
+            "content": "\nSlurm Workload Manager\nVersion 24.05\n\n\nAbout\n\nOverview\nRelease Notes\n\n\n\nUsing\n\nDocumentation\nFAQ\nPublications\n\n\n\nInstalling\n\nDownload\nRelated Software\nInstallation Guide\n\n\n\nGetting Help\n\nMailing Lists\nSupport and Training\nTroubleshooting\n\n\n"
+        }
+    ]
+}

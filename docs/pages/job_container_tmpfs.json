@@ -1,0 +1,17 @@
+{
+    "url": "https://slurm.schedmd.com/job_container_tmpfs.html",
+    "sections": [
+        {
+            "title": "\n\nSlurm Workload Manager\n\n",
+            "content": "\n\nSchedMD\n\n"
+        },
+        {
+            "title": "job_container/tmpfs",
+            "content": "Overviewjob_container/tmpfs is an optional plugin that provides job-specific, private\ntemporary file system space.When enabled on the cluster, a filesytem namespace will be created for each\njob with a unique, private instance of /tmp and /dev/shm for the job to use.\nThese directories can be changed with the Dirs= option in\njob_container.conf. The contents of these directories will be removed at job\ntermination.Installation\n\nThis plugin is built and installed as part of the default build, no extra\ninstallation steps are required.SetupSlurm must be configured to load the job container plugin by adding\nJobContainerType=job_container/tmpfs and PrologFlags=contain in\nslurm.conf. Additional configuration must be done in the job_container.conf\nfile, which should be placed in the same directory as slurm.conf.Job containers can be configured for all nodes, or for a subset of nodes.\nAs an example, if all nodes will be configured the same way, you would put the\nfollowing in your job_container.conf:\nAutoBasePath=true\nBasePath=/var/nvme/storage\nA full description of the parameters available in the job_container.conf\nfile can be found here.Initial Testing\n\nAn easy way to verify that the container is working is to run a job and\nensure that the /tmp directory is empty (since it normally has some other\nfiles) and that \".\" is owned by the user that submitted the job.\ntim@slurm-ctld:~$ srun ls -al /tmp\ntotal 8\ndrwx------  2 tim    root 4096 Feb 10 17:14 .\ndrwxr-xr-x 21 root   root 4096 Nov 15 08:46 ..\nWhile a job is running, root should be able to confirm that\n/$BasePath/$JobID/_tmp exists and is empty. This directory is bind\nmounted into the job. /$BasePath/$JobID should be owned by root,\nand is not intended to be accessible to the user.SPANKThis plugin interfaces with the SPANK api, and automatically joins the job's\ncontainer in the following functions:\nspank_task_init_privileged()\nspank_task_init()\nIn addition to the job itself, the TaskProlog will also be executed inside\nthe container.Last modified 29 November 2023"
+        },
+        {
+            "title": "Navigation",
+            "content": "\nSlurm Workload Manager\nVersion 24.05\n\n\nAbout\n\nOverview\nRelease Notes\n\n\n\nUsing\n\nDocumentation\nFAQ\nPublications\n\n\n\nInstalling\n\nDownload\nRelated Software\nInstallation Guide\n\n\n\nGetting Help\n\nMailing Lists\nSupport and Training\nTroubleshooting\n\n\n"
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "url": "https://slurm.schedmd.com/contributor.html",
+    "sections": [
+        {
+            "title": "\n\nSlurm Workload Manager\n\n",
+            "content": "\n\nSchedMD\n\n"
+        },
+        {
+            "title": "Contributor Agreement",
+            "content": "In order to help ensure the legal integrity of Slurm and provide protection\nfor all contributors and users a contributor agreement is required for all\nsubstantial contributions.\nEach individual making contributions should complete the\nSlurm Workload Manager Individual Contributor License Agreement.\nIn addition the individual's organization should complete the\nSlurm Workload Manager Entity Contributor License Agreement.Signed forms or questions should be directed to\ncla@schedmd.com or posted to\nSchedMD LLC\n905 North 100 East\nLehi, UT 84043\nUSAContacting SchedMD before starting any substantial development effort is\nrecommended to coordinate development and avoid duplication of effort.\nSchedMD can provide design review, code review, integration and long-term\nsupport at reasonable cost. SchedMD can also perform custom development work\nto satisfy your requirements.Last modified 30 December 2022"
+        },
+        {
+            "title": "Navigation",
+            "content": "\nSlurm Workload Manager\nVersion 24.05\n\n\nAbout\n\nOverview\nRelease Notes\n\n\n\nUsing\n\nDocumentation\nFAQ\nPublications\n\n\n\nInstalling\n\nDownload\nRelated Software\nInstallation Guide\n\n\n\nGetting Help\n\nMailing Lists\nSupport and Training\nTroubleshooting\n\n\n"
+        }
+    ]
+}

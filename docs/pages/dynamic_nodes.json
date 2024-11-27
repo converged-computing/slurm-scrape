@@ -1,0 +1,21 @@
+{
+    "url": "https://slurm.schedmd.com/dynamic_nodes.html",
+    "sections": [
+        {
+            "title": "\n\nSlurm Workload Manager\n\n",
+            "content": "\n\nSchedMD\n\n"
+        },
+        {
+            "title": "Dynamic Nodes",
+            "content": "OverviewStarting in Slurm 22.05, nodes can be dynamically added and removed from\nSlurm.\nDynamic Node Communications\n\n\nFor regular, non-dynamically created nodes, Slurm knows how to communicate with\nnodes by reading in the slurm.conf. This is why it is important for a\nnon-dynamic setup that the slurm.conf is synchronized across the cluster. For\ndynamically created nodes, The controller automatically grabs the node's\nNodeAddr and NodeHostname for dynamic slurmd registrations. The\ncontroller then passes the node addresses to the clients so that they\ncommunicate, and even fanout, to other nodes.\nSlurm Configuration\n\n\n\nMaxNodeCount=#\n\nSet to the number of possible nodes that can be active in a system at a time.\nSee the slurm.conf man page for\nmore details.\n\nSelectType=select/cons_tres\nDynamic nodes are only supported with cons_tres.\n\nPartition Assignment\n\n\nDynamic nodes can be automatically assigned to partitions at creation by using\nthe partition's nodes ALL keyword or\nNodeSets and\nspecifying a feature on the nodes.\n\ne.g.\n\nNodeset=ns1 Feature=f1\nNodeset=ns2 Feature=f2\n\nPartitionName=all  Nodes=ALL Default=yes\nPartitionName=dyn1 Nodes=ns1\nPartitionName=dyn2 Nodes=ns2\nPartitionName=dyn3 Nodes=ns1,ns2\n\n\nCreating Nodes\n\n\n\nNodes can be created two ways:\n\n\n\nDynamic slurmd registration\n\nUsing the slurmd -Z and\n--conf options a slurmd\nwill register with the controller and will automatically be added to the system.\n\n\ne.g.\n\nslurmd -Z --conf \"RealMemory=80000 Gres=gpu:2 Feature=f1\"\n\n\n\n\n\n\nscontrol create NodeName= ...\n\nCreate nodes using scontrol by specifying the same NodeName\nline that you would define in the slurm.conf. See slurm.conf\nman page for node\noptions. Only State=CLOUD and State=FUTURE are supported. The\nnode configuration should match what the slurmd will register with\n(e.g. slurmd -C) plus any additional attributes.\n\n\ne.g.\n\nscontrol create NodeName=d[1-100] CPUs=16 Boards=1 SocketsPerBoard=1 CoresPerSocket=8 ThreadsPerCore=2 RealMemory=31848 Gres=gpu:2 Feature=f1 State=cloud\n\nDeleting Nodes\n\n\nNodes can be deleted using scontrol delete nodename=<nodelist>.\nOnly dynamic nodes that have no running jobs and that are not part of a\nreservation can be deleted.\nLimitations\n\n\n\n\nDynamic nodes are not sorted internally and when added to Slurm they will\npotentially be alphabetically out of order internally \u2014 leading to\nsuboptimal job allocations if node names represent topology of the nodes.\n\n\nLast modified 13 January 2024"
+        },
+        {
+            "title": "Navigation",
+            "content": "\nSlurm Workload Manager\nVersion 24.05\n\n\nAbout\n\nOverview\nRelease Notes\n\n\n\nUsing\n\nDocumentation\nFAQ\nPublications\n\n\n\nInstalling\n\nDownload\nRelated Software\nInstallation Guide\n\n\n\nGetting Help\n\nMailing Lists\nSupport and Training\nTroubleshooting\n\n\n"
+        },
+        {
+            "title": "Creating Nodes\n\n",
+            "content": "\nNodes can be created two ways:\n\n\n\nDynamic slurmd registration\n\nUsing the slurmd -Z and\n--conf options a slurmd\nwill register with the controller and will automatically be added to the system.\n\n\ne.g.\n\nslurmd -Z --conf \"RealMemory=80000 Gres=gpu:2 Feature=f1\"\n\n\n\n\n\n\nscontrol create NodeName= ...\n\nCreate nodes using scontrol by specifying the same NodeName\nline that you would define in the slurm.conf. See slurm.conf\nman page for node\noptions. Only State=CLOUD and State=FUTURE are supported. The\nnode configuration should match what the slurmd will register with\n(e.g. slurmd -C) plus any additional attributes.\n\n\nscontrol create NodeName=d[1-100] CPUs=16 Boards=1 SocketsPerBoard=1 CoresPerSocket=8 ThreadsPerCore=2 RealMemory=31848 Gres=gpu:2 Feature=f1 State=cloud\n"
+        }
+    ]
+}

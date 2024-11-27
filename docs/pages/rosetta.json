@@ -1,0 +1,17 @@
+{
+    "url": "https://slurm.schedmd.com/rosetta.html",
+    "sections": [
+        {
+            "title": "\n\nSlurm Workload Manager\n\n",
+            "content": "\n\nSchedMD\n\n"
+        },
+        {
+            "title": "Rosetta Stone of Workload Managers",
+            "content": "PBS/Torque, Slurm, LSF, SGE and LoadLevelerThis table lists the most common command, environment variables, and\njob specification options used by the major workload management systems:\nPBS/Torque, Slurm, LSF, SGE and LoadLeveler.\nEach of these workload managers has unique features, but the most commonly\nused functionality is available in all of these environments as listed\nin the table.\nThis should be considered a work in progress and contributions to improve\nthe document are welcome.Click to get full size fileLast modified 17 January 2013"
+        },
+        {
+            "title": "Navigation",
+            "content": "\nSlurm Workload Manager\nVersion 24.05\n\n\nAbout\n\nOverview\nRelease Notes\n\n\n\nUsing\n\nDocumentation\nFAQ\nPublications\n\n\n\nInstalling\n\nDownload\nRelated Software\nInstallation Guide\n\n\n\nGetting Help\n\nMailing Lists\nSupport and Training\nTroubleshooting\n\n\n"
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "url": "https://slurm.schedmd.com/kubernetes.html",
+    "sections": [
+        {
+            "title": "\n\nSlurm Workload Manager\n\n",
+            "content": "\n\nSchedMD\n\n"
+        },
+        {
+            "title": "Kubernetes Guide",
+            "content": "Contents\nOverview\nPresentations\nOverviewKubernetes is being adopted into HPC\nclusters to orchestrate deployments (e.g. software, infrastructure) and run\ncertain workloads (e.g. AI/ML inference). There is ongoing interest in\nintegrating Kubernetes and Slurm to achieve a unified cluster, optimized\nresource utilization, and workflows that leverage each system.The ways in which Slurm and Kubernetes are designed to handle certain types\nof workloads may change over time. Additionally, how they interact with each\nother may change, allowing for new possibilities. This is still an evolving\narea.Presentations\n\nNote that older presentations may contain outdated information.Presentations from 2023\n\nSlurm and/or/vs\n    Kubernetes, Tim Wickberg, SchedMD (SC23, November 2023)\n  \n\nNever use Slurm HA again: Solve all\n    your problems with Kubernetes, Chris Samuel and Doug Jacobsen, NERSC\n    (SLUG23, November 2023)\n  \nLast modified 14 February 2024"
+        },
+        {
+            "title": "Navigation",
+            "content": "\nSlurm Workload Manager\nVersion 24.05\n\n\nAbout\n\nOverview\nRelease Notes\n\n\n\nUsing\n\nDocumentation\nFAQ\nPublications\n\n\n\nInstalling\n\nDownload\nRelated Software\nInstallation Guide\n\n\n\nGetting Help\n\nMailing Lists\nSupport and Training\nTroubleshooting\n\n\n"
+        }
+    ]
+}

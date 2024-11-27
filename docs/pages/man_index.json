@@ -1,0 +1,17 @@
+{
+    "url": "https://slurm.schedmd.com/man_index.html",
+    "sections": [
+        {
+            "title": "\n\nSlurm Workload Manager\n\n",
+            "content": "\n\nSchedMD\n\n"
+        },
+        {
+            "title": "Man Pages",
+            "content": "NOTE: This documentation is for Slurm version 24.05.\nDocumentation for other versions of Slurm is distributed with the codeRefer to this page for an overview of Slurm.Commands\n\nsacct\nDisplays accounting data for all jobs and job steps in the Slurm job\n\taccounting log or Slurm database.\nsacctmgr\nUsed to view and modify Slurm account information.\nsalloc\nObtain a Slurm job allocation (a set of nodes), execute a command,\n\tand then release the allocation when the command is finished.\nsattach\nAttach to a Slurm job step.\nsbatch\nSubmit a batch script to Slurm.\nsbcast\nTransmit a file to the nodes allocated to a Slurm job.\nscancel\nUsed to signal jobs or job steps that are under the control of Slurm.\nscontrol\nView or modify Slurm configuration and state.\nscrontab\nManage Slurm crontab files.\nscrun\nAn OCI runtime proxy for slurm.\nsdiag\nScheduling diagnostic tool.\nsh5util\nMerge utility for acct_gather_profile plugin.\nsinfo\nView information about Slurm nodes and partitions.\nsprio\nView the factors that comprise a job's scheduling priority.\nsqueue\nView information about jobs located in the Slurm scheduling queue.\nsreport\nGenerate reports from the slurm accounting data.\nsrun\nRun parallel jobs.\nsshare\nTool for listing the shares of associations to a cluster.\nsstat\nDisplay the status information of a running job/step.\nstrigger\nUsed to set, get or clear Slurm trigger information.\nsview\nGraphical user interface to view and modify Slurm state.\nConfiguration Files\n\nacct_gather.conf\nSlurm configuration file for the acct_gather plugins.\nburst_buffer.conf\nSlurm burst buffer configuration.\ncgroup.conf\nSlurm configuration file for the cgroup support.\ngres.conf\nSlurm configuration file for generic resource management.\nhelpers.conf\nSlurm configuration file for the node_features/helpers plugin.\njob_container.conf\nSlurm configuration file for configuring the tmpfs job container\n\tplugin.\nknl.conf\nSlurm configuration file for Intel Knights Landing management.\nmpi.conf\nSlurm configuration file to allow the configuration of MPI plugins.\noci.conf\nSlurm configuration file for OCI Containers.\nplugstack.conf\nSlurm configuration file for SPANK plug-in stack.\nslurm.conf\nSlurm configuration file.\nslurmdbd.conf\nSlurm Database Daemon (SlurmDBD) configuration file.\ntopology.conf\nSlurm configuration file for defining the network topology.\nDaemons and Other\n\nsackd\nSlurm Auth and Cred Kiosk Daemon.\nslurmctld\nThe central management daemon of Slurm.\nslurmd\nThe compute node daemon for Slurm.\nslurmdbd\nSlurm Database Daemon.\nslurmrestd\nThe Slurm REST API daemon.\nslurmstepd\nThe job step manager for Slurm.\nSPANK\nSlurm Plug-in Architecture for Node and job (K)control.\nLast modified 10 July 2024"
+        },
+        {
+            "title": "Navigation",
+            "content": "\nSlurm Workload Manager\nVersion 24.05\n\n\nAbout\n\nOverview\nRelease Notes\n\n\n\nUsing\n\nDocumentation\nFAQ\nPublications\n\n\n\nInstalling\n\nDownload\nRelated Software\nInstallation Guide\n\n\n\nGetting Help\n\nMailing Lists\nSupport and Training\nTroubleshooting\n\n\n"
+        }
+    ]
+}

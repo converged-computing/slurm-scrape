@@ -1,0 +1,17 @@
+{
+    "url": "https://slurm.schedmd.com/multi_cluster.html",
+    "sections": [
+        {
+            "title": "\n\nSlurm Workload Manager\n\n",
+            "content": "\n\nSchedMD\n\n"
+        },
+        {
+            "title": "Multi-Cluster Operation",
+            "content": "A cluster is comprised of all the nodes managed by a single slurmctld\ndaemon.  Slurm offers the ability to target commands to other\nclusters instead of, or in addition to, the local cluster on which the\ncommand is invoked.  When this behavior is enabled, users can submit\njobs to one or many clusters and receive status from those remote\nclusters.For example:\njuser@dawn> squeue -M dawn,dusk\nCLUSTER: dawn\nJOBID PARTITION   NAME   USER  ST   TIME NODES BP_LIST(REASON)\n76897    pdebug  myJob  juser   R   4:10   128 dawn001[8-15]\n76898    pdebug  myJob  juser   R   4:10   128 dawn001[16-23]\n16899    pdebug  myJob  juser   R   4:10   128 dawn001[24-31]\n\nCLUSTER: dusk\nJOBID PARTITION   NAME   USER  ST   TIME NODES BP_LIST(REASON)\n11950    pdebug   aJob  juser   R   4:20   128 dusk000[0-15]\n11949    pdebug   aJob  juser   R   5:01   128 dusk000[48-63]\n11946    pdebug   aJob  juser   R   6:35   128 dusk000[32-47]\n11945    pdebug   aJob  juser   R   6:36   128 dusk000[16-31]\nMost of the Slurm client commands offer the \"-M, --clusters=\"\noption which provides the ability to communicate to and from a comma\nseparated list of clusters.When sbatch, salloc or srun is invoked with a cluster\nlist, Slurm will immediately submit the job to the cluster that offers the\nearliest start time subject its queue of pending and running jobs.  Slurm will\nmake no subsequent effort to migrate the job to a different cluster (from the\nlist) whose resources become available when running jobs finish before their\nscheduled end times.NOTE: In order for salloc or srun to work with the \"-M,\n--clusters\" option in a multi-cluster environment, the compute nodes must be\naccessible to and from the submission host.Multi-Cluster Configuration\n\nThe multi-cluster functionality requires the use of the SlurmDBD.\nThe AccountingStorageType in the slurm.conf file must be set to the\naccounting_storage/slurmdbd plugin and the MUNGE or authentication\nkeys must be installed to allow each cluster to communicate with the\nSlurmDBD.  Note that MUNGE can be configured to use different keys for\ncommunications within a cluster and across clusters if desired.\nSee accounting for details.Once configured, Slurm commands specifying the \"-M, --clusters=\"\noption will become active for all of the clusters listed by the\n\"sacctmgr show clusters\" command.\nSee also the Slurm Federated Scheduling Guide.\nLast modified 9 June 2021"
+        },
+        {
+            "title": "Navigation",
+            "content": "\nSlurm Workload Manager\nVersion 24.05\n\n\nAbout\n\nOverview\nRelease Notes\n\n\n\nUsing\n\nDocumentation\nFAQ\nPublications\n\n\n\nInstalling\n\nDownload\nRelated Software\nInstallation Guide\n\n\n\nGetting Help\n\nMailing Lists\nSupport and Training\nTroubleshooting\n\n\n"
+        }
+    ]
+}

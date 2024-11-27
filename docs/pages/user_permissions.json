@@ -1,0 +1,21 @@
+{
+    "url": "https://slurm.schedmd.com/user_permissions.html",
+    "sections": [
+        {
+            "title": "\n\nSlurm Workload Manager\n\n",
+            "content": "\n\nSchedMD\n\n"
+        },
+        {
+            "title": "User Permissions",
+            "content": "Slurm supports several special user permissions as described below.OperatorThese users can add, modify, and remove any database object\n(user, account, etc), and add other operators.\nOn a SlurmDBD served cluster, these users can\n\nView information that is blocked to regular uses by a PrivateData flag\nCreate/Alter/Delete Reservations\n\nSet using an AdminLevel option in the user's database record.\nFor configuration information, see\nAccounting and Resource Limits.\nAdmin\nThese users have the same level of privileges as an operator in the database.\nThey can also alter anything on a served slurmctld as if they were the SlurmUser\nor root.\nAn AdminLevel option in the user's database record.\nFor configuration information, see\nAccounting and Resource Limits.\nCoordinator\nA special privileged user, usually an account manager, that can add\nusers or sub-accounts to the account they are coordinator over.\nThis should be a trusted person since they can change limits on account and\nuser associations, as well as cancel, requeue or reassign accounts of jobs\ninside their realm. Note that a coordinator may not increase job limits above\nthe parent ones.\nSet using a table in Slurm's database defining users and accounts for\nwhich they can serve as coordinators.\nFor configuration information, see the\nsacctmgr man page.\nLast modified 07 April 2020\n"
+        },
+        {
+            "title": "Navigation",
+            "content": "\nSlurm Workload Manager\nVersion 24.05\n\n\nAbout\n\nOverview\nRelease Notes\n\n\n\nUsing\n\nDocumentation\nFAQ\nPublications\n\n\n\nInstalling\n\nDownload\nRelated Software\nInstallation Guide\n\n\n\nGetting Help\n\nMailing Lists\nSupport and Training\nTroubleshooting\n\n\n"
+        },
+        {
+            "title": "Admin",
+            "content": "These users have the same level of privileges as an operator in the database.\nThey can also alter anything on a served slurmctld as if they were the SlurmUser\nor root.An AdminLevel option in the user's database record.\nFor configuration information, see\nAccounting and Resource Limits.CoordinatorA special privileged user, usually an account manager, that can add\nusers or sub-accounts to the account they are coordinator over.\nThis should be a trusted person since they can change limits on account and\nuser associations, as well as cancel, requeue or reassign accounts of jobs\ninside their realm. Note that a coordinator may not increase job limits above\nthe parent ones.Set using a table in Slurm's database defining users and accounts for\nwhich they can serve as coordinators.\nFor configuration information, see the\nsacctmgr man page.Last modified 07 April 2020"
+        }
+    ]
+}
